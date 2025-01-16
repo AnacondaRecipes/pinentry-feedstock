@@ -15,30 +15,30 @@ build:
     - $RPATH/libassuan.9.dylib
     - $RPATH/libgpg-error.0.dylib
     - $RPATH/libncursesw.6.dylib
+  # libgpg-error does not exist on the s390x and win platforms
   skip: True  # [win]
   skip: True  # [s390x]
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
     - make
     - libtool
     - automake
     - gettext
-    - libassuan ==3.0.1
+    - libassuan >=3.0.1,<4
   host:
     - libiconv ==1.16
   run:
-    - libassuan ==3.0.1
-    - libgpg-error
-    - ncurses
+    - libassuan >=3.0.1,<4
+    - libgpg-error >=1.42,<2
     - libiconv ==1.16
+    - ncurses
     
 about:
   home: https://www.gnupg.org/related_software/pinentry/index.html
   summary: Pinentry is a small collection of dialog programs that allow GnuPG to read passphrases and PIN numbers in a secure manner.
-  license: GPL-v2
+  license: GPL-2.0
   license_family: GPL
   license_file: COPYING
   description: |
