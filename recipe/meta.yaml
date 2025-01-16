@@ -11,12 +11,12 @@ source:
 
 build:
   number: 0
-  skip: True  # [win]
-  skip: True  # [s390x]
   missing_dso_whitelist:
     - $RPATH/libassuan.9.dylib
     - $RPATH/libgpg-error.0.dylib
     - $RPATH/libncursesw.6.dylib
+  skip: True  # [win]
+  skip: True  # [s390x]
 
 requirements:
   build:
