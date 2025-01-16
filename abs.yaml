@@ -4,6 +4,6 @@ build_env_vars:
 upload_channels:
   - sfe1ed40
 
-chnnels:
+channels:
   - https://staging.continuum.io/prefect/fs/libassuan-feedstock/pr1/904e52b
 
