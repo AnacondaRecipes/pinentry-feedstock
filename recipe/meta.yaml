@@ -12,8 +12,10 @@ source:
 build:
   number: 0
   missing_dso_whitelist:
-    - $RPATH/libassuan.9.dylib
-    - $RPATH/libgpg-error.0.dylib
+    - $RPATH/libassuan.9.dylib  # [osx]
+    - $RPATH/libgpg-error.0.dylib  # [osx]
+    - $RPATH/libassuan.so.9  # [linux]
+    - $RPATH/libgpg-error.so.0  # [linux]
   # libgpg-error does not exist on the s390x and win platforms
   skip: True  # [win]
   skip: True  # [s390x]
