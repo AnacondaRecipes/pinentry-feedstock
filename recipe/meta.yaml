@@ -27,6 +27,7 @@ requirements:
     - libtool
     - automake
     - gettext
+  host:
     - libassuan >=3.0.1,<4
   run:
     - libassuan >=3.0.1,<4
