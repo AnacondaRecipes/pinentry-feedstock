@@ -27,9 +27,9 @@ requirements:
     - libassuan >=3.0.1,<4
     - libgpg-error >=1.42,<2
 
-  test:
-    commands:
-      pinentry --help
+test:
+  commands:
+    pinentry --help
     
 about:
   home: https://www.gnupg.org/related_software/pinentry/index.html
